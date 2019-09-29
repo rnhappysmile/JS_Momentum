@@ -28,6 +28,15 @@ body {
 .showing {
   display: block;
 }
+
+.top-row{
+  /* position:absolute; */
+}
+
+.top-right{
+  float: right;
+  background-color: rgba(208, 201, 233, 0.5);
+}
   
 @keyframes fadeIn {
   from {
