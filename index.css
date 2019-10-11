@@ -56,3 +56,18 @@ body {
   z-index: -1;
   animation: fadeIn 0.5s linear;
 }
+
+/* ======== Calendar ======== */
+.js-calendar {
+  width: 170px;
+  margin: 30px;
+  padding: 20px 20px 10px;
+  text-align: center;
+  font-weight: 800;
+  border: 1px solid #ddd;
+  cursor: default;
+}
+
+.cal-head {
+  width: 170px;
+}
