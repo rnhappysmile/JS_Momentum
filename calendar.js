@@ -1,5 +1,7 @@
 const MomentumCalendar = document.querySelector(".js-calendar")
 const calBody = document.querySelector(".cal-body")
+const btnNext = document.querySelector(".btn-cal.next");
+const btnPrev = document.querySelector(".btn-cal.prev");
 
 const initDate = {
   monList: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -92,3 +94,6 @@ function init(){
 }
 
 init();
+
+btnPrev.addEventListener('click', () => loadYYMM(initDate.prevMonth()));
+btnNext.addEventListener('click', () => loadYYMM(initDate.nextMonth()));
