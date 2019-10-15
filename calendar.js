@@ -2,6 +2,7 @@ const MomentumCalendar = document.querySelector(".js-calendar")
 const calBody = document.querySelector(".cal-body")
 const btnNext = document.querySelector(".btn-cal.next");
 const btnPrev = document.querySelector(".btn-cal.prev");
+const calModal = document.querySelector(".cal-modal");
 
 const initDate = {
   monList: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -41,11 +42,26 @@ function setCalHead (month, fullYear) {
   document.querySelector('.cal-year').textContent = fullYear;
 }
 
+/**
+ * 모달창 띄우기 테스트
+ */
+
+function modal(event)
+{
+  console.log(event);
+  if(event.target.classList.contains('day')){
+    let day = Number(event.target.textContent);
+    let span = document.createElement("span");
+    span.innerText = day;
+
+    calModal.appendChild(span);
+    calModal.style.display = 'inline';
+  }
+}
 
 /**
 * @param {date} fullDate
 */
-
 function loadYYMM (fullDate) {
   let yy = fullDate.getFullYear();
   let mm = fullDate.getMonth();
@@ -86,6 +102,7 @@ function loadYYMM (fullDate) {
     trtd += '</td>';
   }
   calBody.innerHTML = trtd;
+  calBody.addEventListener("click", modal);
 }
 
 function init(){    
