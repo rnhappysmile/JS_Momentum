@@ -50,11 +50,10 @@ function modal(event)
 {
   console.log(event);
   if(event.target.classList.contains('day')){
-    let day = Number(event.target.textContent);
-    let span = document.createElement("span");
-    span.innerText = day;
+    let day = Number(event.target.textContent);    
+    const calModalDay = document.querySelector(".cal-modal-day");
+    calModalDay.innerText = day;
 
-    calModal.appendChild(span);
     calModal.style.display = 'inline';
   }
 }

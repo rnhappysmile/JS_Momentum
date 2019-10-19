@@ -112,7 +112,7 @@ body {
   content: '';
   display: block;
   clear: both;
-  float: none;
+  float: none; 
 }
 
 /* The Modal (background) */
